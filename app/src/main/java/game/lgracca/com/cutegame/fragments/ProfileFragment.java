@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import game.lgracca.com.cutegame.R;
 
+/**
+ * ProfileFragment class extends Fragment and contains an override onCreate method.
+ */
 public class ProfileFragment extends Fragment {
 
   View myView;

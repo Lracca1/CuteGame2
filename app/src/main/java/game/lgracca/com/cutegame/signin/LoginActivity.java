@@ -12,6 +12,10 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import game.lgracca.com.cutegame.R;
 
+/**
+ * LoginActivity class extends AppCompatActivity and contains onCreate, onStart,
+ * and onActivityResult override methods.
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private static final int REQUEST_CODE = 1000;

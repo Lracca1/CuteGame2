@@ -11,6 +11,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import game.lgracca.com.cutegame.R;
 
+/**
+ * Main2Activity class extends AppCompatActivity and contains onCreate, onCreateOptionsMenu,
+ *  and onOptionsItemSelected override methods.
+ */
 public class Main2Activity extends AppCompatActivity {
 
   @Override
