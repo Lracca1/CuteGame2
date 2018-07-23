@@ -1,11 +1,11 @@
 package game.lgracca.com.cutegame;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,9 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import game.lgracca.com.cutegame.fragments.CharactersFragment;
 import game.lgracca.com.cutegame.fragments.CreamsFragment;
 import game.lgracca.com.cutegame.fragments.ProfileFragment;
+import game.lgracca.com.cutegame.signin.LoginActivity;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
+      return true;
+    } else if (id == R.id.action_login) {
+      Intent intent = new Intent(MainActivity.this, LoginActivity.class);
       return true;
     }
 
