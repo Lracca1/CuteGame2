@@ -25,7 +25,7 @@ import game.lgracca.com.cutegame.signin.LoginActivity;
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
-  private Button p;
+  private Button play;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +34,24 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
-    p = (Button)findViewById(R.id.button_login);
-    p.setOnClickListener(new OnClickListener() {
+    play = (Button)findViewById(R.id.button_play);
+    play.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
         Intent i = new Intent(MainActivity.this,GameActivity.class);
         startActivity(i);
-
       }
     });
+
+    play = (Button)findViewById(R.id.button_login);
+    play.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent i = new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(i);
+      }
+    }); // Tried login but button doesn't work.
+
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -89,9 +98,9 @@ public class MainActivity extends AppCompatActivity
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
       return true;
-    } else if (id == R.id.action_login) {
-      Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-      startActivity(intent); // Tried adding log in but crashes.
+//    } else if (id == R.id.action_login) {
+//      Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//      startActivity(intent); // Tried adding log in but crashes.
     }
 
     return super.onOptionsItemSelected(item);
