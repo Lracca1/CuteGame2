@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
       return true;
     } else if (id == R.id.action_login) {
       Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-      return true;
+      startActivity(intent); // Tried adding log in but crashes.
     }
 
     return super.onOptionsItemSelected(item);
