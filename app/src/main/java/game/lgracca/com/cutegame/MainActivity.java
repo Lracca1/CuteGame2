@@ -14,13 +14,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import game.lgracca.com.cutegame.fragments.CharactersFragment;
 import game.lgracca.com.cutegame.fragments.CreamsFragment;
 import game.lgracca.com.cutegame.fragments.ProfileFragment;
+import game.lgracca.com.cutegame.game.GameActivity;
 import game.lgracca.com.cutegame.signin.LoginActivity;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
+
+  private Button p;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,15 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
 
+    p = (Button)findViewById(R.id.button_login);
+    p.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent i = new Intent(MainActivity.this,GameActivity.class);
+        startActivity(i);
+
+      }
+    });
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
