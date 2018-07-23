@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import game.lgracca.com.cutegame.fragments.CharactersFragment;
+import game.lgracca.com.cutegame.fragments.CreamsFragment;
+import game.lgracca.com.cutegame.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
