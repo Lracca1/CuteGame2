@@ -12,6 +12,6 @@ public interface CreamDao {
   @Insert
   long insert(Cream cream);
 
-  @Query("SELECT * FROM Cream WHERE points = :points")
+  @Query("SELECT * FROM Cream")
   List<Cream> select();
 }

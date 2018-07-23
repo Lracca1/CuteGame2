@@ -12,6 +12,6 @@ public interface CharacterDao {
   @Insert
   long insert(Character character);
 
-  @Query("SELECT * FROM character WHERE name = :name")
+  @Query("SELECT * FROM character")
   List<Character> select();
 }
