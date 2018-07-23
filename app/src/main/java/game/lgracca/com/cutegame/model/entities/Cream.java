@@ -14,4 +14,21 @@ public class Cream {
 
   @NonNull
   private Integer points;
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  @NonNull
+  public Integer getPoints() {
+    return points;
+  }
+
+  public void setPoints(@NonNull Integer points) {
+    this.points = points;
+  }
 }
