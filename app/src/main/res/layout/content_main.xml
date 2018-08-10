@@ -5,6 +5,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@drawable/cute_background"
   app:layout_behavior="@string/appbar_scrolling_view_behavior"
   tools:context="game.lgracca.com.cutegame.MainActivity"
   tools:showIn="@layout/app_bar_main">
@@ -20,7 +21,6 @@
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
@@ -31,16 +31,19 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0">
+    app:layout_constraintVertical_bias="0.498">
 
     <Button
       android:id="@+id/button_play"
       style="@style/Widget.AppCompat.Button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:background="@color/colorAccent"
       android:text="Play"/>
 
     <Button
